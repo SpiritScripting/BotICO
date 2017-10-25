@@ -43,7 +43,7 @@ def unknown(bot, update):
 def main():
 	import yaml
 
-	cfg_file = '/etc/spirit/botcfg.yml'
+	cfg_file = './botcfg.yml'
 	with open(cfg_file, 'r') as ymlfile:
 		cfg = yaml.load(ymlfile)
 	token = cfg['token']
