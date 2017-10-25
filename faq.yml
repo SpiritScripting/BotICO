@@ -1,0 +1,16 @@
+ID001:
+ id: "001"
+ answer: "An Answer"
+ words:
+  - keyword1
+  - word2
+  - question3
+
+ID002:
+ id: "001"
+ answer: "A whole different answer"
+ words:
+  - keyword2
+  - different
+  - words
+

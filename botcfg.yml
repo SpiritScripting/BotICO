@@ -1,0 +1,12 @@
+token: 'Bot Token'
+instance:
+  botico:
+    ip: server_IP
+    dscr: 'Bot Description'
+    contact: 'SmartContract to stalk'
+module:
+  question:
+    - keyword
+  ico:
+    - keyword
+    - args
