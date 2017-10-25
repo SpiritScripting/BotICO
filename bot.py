@@ -9,14 +9,7 @@ import logging
 import argparse
 
 # Command modules
-#import cmdGraph
-
-parser = argparse.ArgumentParser(description='Spirit Scripts  - ICO Bot')
-parser.add_argument('-m','--method', help='Command to Send',required=False)
-parser.add_argument('-i','--chatid', help='Chat ID',required=False)
-parser.add_argument('-t','--text', help='Text to send',required=False)
-
-args = parser.parse_args()
+import cmdFAQ
 
 method = ''
 token = ''
@@ -43,7 +36,7 @@ def unknown(bot, update):
 def main():
 	import yaml
 
-	cfg_file = '/etc/spirit/botcfg.yml'
+	cfg_file = './botcfg.yml'
 	with open(cfg_file, 'r') as ymlfile:
 		cfg = yaml.load(ymlfile)
 	token = cfg['token']
@@ -53,7 +46,7 @@ def main():
 	updater = Updater(token)
 	dp = updater.dispatcher
 	dp.add_handler(CommandHandler("help", help))
-#	dp.add_handler(CommandHandler("get_X", cmdGetX.get_x, pass_args=True))
+	dp.add_handler(CommandHandler("question", cmdFAQ.get_faq, pass_args=True))
 	updates = bot.getUpdates()
 	dp.add_error_handler(error)
 	updater.start_polling()

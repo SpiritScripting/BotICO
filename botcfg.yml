@@ -1,0 +1,19 @@
+token: '392545771:AAHg4Oe5F-XzaMkvErp7ELDd9j47fjfDBwc'
+instance:
+  bb:
+    ip: 186.15.226.20
+    dscr: 'Nagios Backbone'
+    contact: '-10316826'
+    nagiosuser: 'nagiosadmin'
+    nagiospass: 'reCtado$'
+    socketport: '5656'
+module:
+  graph:
+    - instancia
+    - host
+    - service
+    - args
+  get:
+    - instancia
+    - comando
+    - args
