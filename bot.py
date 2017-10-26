@@ -36,7 +36,7 @@ def unknown(bot, update):
 def main():
 	import yaml
 
-	cfg_file = './botcfg.yml'
+	cfg_file = './config/botcfg.yml'
 	with open(cfg_file, 'r') as ymlfile:
 		cfg = yaml.load(ymlfile)
 	token = cfg['token']
