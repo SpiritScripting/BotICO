@@ -7,9 +7,8 @@ from telegram import InlineQueryResultArticle, ParseMode, InputTextMessageConten
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, CallbackQueryHandler, ConversationHandler, Filters
 import logging
 import argparse
-
 # Command modules
-import cmdFAQ
+import commands.cmdFAQ
 
 method = ''
 token = ''
