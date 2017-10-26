@@ -9,6 +9,6 @@ def get_faq(bot, update, args):
 				wordcount = 0
 				if item in cfg[id]['words']:
 					wordcount += 1
-					score_dict[cfg[id]['id']] = 
+#					score_dict[cfg[id]['id']] = 
 			answer=cfg[id]['answer']
 			bot.sendMessage(update.message.chat_id, text=answer)
