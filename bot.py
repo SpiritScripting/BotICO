@@ -7,9 +7,8 @@ from telegram import InlineQueryResultArticle, ParseMode, InputTextMessageConten
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, CallbackQueryHandler, ConversationHandler, Filters
 import logging
 import argparse
-
 # Command modules
-import cmdFAQ
+import commands.cmdFAQ
 
 method = ''
 token = ''
@@ -36,7 +35,7 @@ def unknown(bot, update):
 def main():
 	import yaml
 
-	cfg_file = './botcfg.yml'
+	cfg_file = './config/botcfg.yml'
 	with open(cfg_file, 'r') as ymlfile:
 		cfg = yaml.load(ymlfile)
 	token = cfg['token']

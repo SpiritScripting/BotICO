@@ -1,6 +1,6 @@
 def get_faq(bot, update, args):
 	import yaml
-	faq_file = './faq.yml'
+	faq_file = '../config/faq.yml'
 	score_dict = {'':''}
 	with open(faq_file, 'r') as ymlfile:
 		cfg = yaml.load(ymlfile)
