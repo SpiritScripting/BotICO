@@ -1,7 +1,8 @@
-token: 'Bot Token'
+token: '392545771:AAHg4Oe5F-XzaMkvErp7ELDd9j47fjfDBwc'
+etherscan_token: 'F49KWCST6IPZHG61AP77G3FQUIRJ4EMMAW'
 instance:
   botico:
-    ip: server_IP
+    #ip: server_IP
     dscr: 'Bot Description'
     contact: 'SmartContract to stalk'
 module:

@@ -9,6 +9,7 @@ import logging
 import argparse
 # Command modules
 import commands.cmdFAQ as FAQ
+import commands.cmdICO as ICO
 
 method = ''
 token = ''
@@ -46,6 +47,7 @@ def main():
 	dp = updater.dispatcher
 	dp.add_handler(CommandHandler("help", help))
 	dp.add_handler(CommandHandler("question", FAQ.get_faq, pass_args=True))
+	dp.add_handler(CommandHandler("ico", ICO.get_ico, pass_args=True))
 	updates = bot.getUpdates()
 	dp.add_error_handler(error)
 	updater.start_polling()

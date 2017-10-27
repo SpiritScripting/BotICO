@@ -101,4 +101,4 @@ ENV/
 .mypy_cache/
 
 # bot config
-config/
+config/botcfg.yml
