@@ -81,7 +81,11 @@ def get_ico(bot, update, args):
 					if whalecount<10:
 						answer = answer + "%s: %.2f \n" % (k, v)
 					whalecount += 1
-		elif len(args)>1:
+		elif len(args)==2:
+			if args[0] == 'address':
+				totalBalance = requests.get('https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=' + ico['contract'] + '&address=' + args[1] + '&tag=latest&apikey='+ cfg['etherscan_token'] ).json()['result']
+				answer =  args[1] + ' : ' + str(int(totalBalance)/ethdiv)	+ " DIVX."
+		elif len(args)>2:
 			answer='Too Many Arguments. /help for help' 
 
 	bot.sendMessage(update.message.chat_id, text=answer)
